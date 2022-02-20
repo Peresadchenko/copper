@@ -1,10 +1,21 @@
-// $default: #1ea262;
+$default: #fff;
+// $accent: ;
+$text: #031412;
 // $title: #1c3a2c;
-// $text: #898989;
 // $btn: #db9e29;
 
 
-// %Inter-700 {
-//     font-family: "Inter-Bold";
-//     font-weight: 700;
-// }
+%mont_extralightdemo-400 {
+    font-family: "mont_extralightdemo";
+    font-weight: 400;
+}
+
+%mont_heavydemo-600 {
+    font-family: "mont_heavydemo";
+    font-weight: 600;
+}
+
+%Lighthaus-400 {
+    font-family: "Lighthaus";
+    font-weight: 400;
+}
