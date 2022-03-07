@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "mont_extralightdemo";
+    font-weight: 400;
+    font-style: normal;
+    src: local("mont_extralightdemo"), url("../fonts/mont_extralightdemo.woff2") format("woff2"),
+        url("../fonts/mont_extralightdemo.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "mont_heavydemo";
+    font-weight: 600;
+    font-style: normal;
+    src: local("mont_heavydemo"), url("../fonts/mont_heavydemo.woff2") format("woff2"),
+        url("../fonts/mont_heavydemo.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lighthaus";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Lighthaus"), url("../fonts/Lighthaus.woff2") format("woff2"),
+        url("../fonts/Lighthaus.woff") format("woff");
+    font-display: swap;
+}
