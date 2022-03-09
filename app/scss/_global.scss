@@ -81,6 +81,7 @@ body {
 
 .item-price__sale {
     color: $sale;
+    @extend %mont_heavydemo-600;
 }
 .sale-price {
     font-size: 20px;
@@ -89,7 +90,7 @@ body {
     position: relative;
     margin-bottom: 5px;
     &::before {
-        border-bottom: 3px solid $text;
+        border-bottom: 1px solid $text;
         position: absolute;
         content: "";
         width: 100%;
@@ -98,6 +99,10 @@ body {
         top: 0;
         transform: rotate(15deg);
     }
+}
+.sale-priceCart {
+    font-size: 14px;
+    line-height: 13px;
 }
 
 .btn {
@@ -113,6 +118,20 @@ body {
     transition: all 0.3s;
     &:hover {
         background: linear-gradient(150.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+        box-shadow: 0px 0px 30px 0px rgba(196, 196, 196, 0.3);
+    }
+}
+.btn-2 {
+    display: block;
+    border: 1px solid $text;
+    padding: 15px 130px;
+    font-size: 16px;
+    line-height: 15px;
+    color: $text;
+    text-align: center;
+    @extend %mont_heavydemo-600;
+    cursor: pointer;
+    &:hover {
         box-shadow: 0px 0px 30px 0px rgba(196, 196, 196, 0.3);
     }
 }

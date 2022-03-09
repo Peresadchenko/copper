@@ -11,6 +11,7 @@
     background: linear-gradient(285.45deg, #0b3f37 38.27%, #cb8d62 141.81%);
     &__wrapper {
         background: no-repeat url(../images/vector-fon.png);
+        background-size: cover;
     }
     .logo {
         padding-top: 45px;
@@ -384,7 +385,8 @@
 }
 
 .choose-us {
-    background: center url(../images/vector-fon-2.jpg);
+    background: url(../images/vector-fon-2.jpg);
+    background-size: cover;
     padding: 80px 0;
     &__inner {
         display: grid;
@@ -429,7 +431,8 @@
         z-index: 5;
     }
     &__wrapper {
-        background: top center url(../images/vector-fon.png);
+        background: url(../images/vector-fon.png);
+        background-size: cover;
         position: relative;
         padding: 80px 0 75px;
     }
@@ -513,6 +516,7 @@
     margin-bottom: 130px;
     &__wrapper {
         background: url("../images/vector-fon-2.jpg");
+        background-size: cover;
     }
     &__inner {
         display: flex;
@@ -617,6 +621,7 @@
 .history {
     &__wrapper {
         background: no-repeat center url("../images/bg-history.jpg");
+        background-size: cover;
         position: relative;
         &::before {
             content: "COPPER PRO";
@@ -814,6 +819,11 @@
         max-width: 615px;
         margin-bottom: 20px;
     }
+    &__item-link {
+        &::after {
+            bottom: 2px;
+        }
+    }
 }
 
 // news-detalis.html-------------------------------------------
@@ -933,6 +943,293 @@
             height: 18px;
             background: url("../images/pagination-next2.svg");
         }
+    }
+}
+
+// cart.html-------------------------------------------
+
+.cart {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 70% 30%);
+        grid-gap: 30px;
+    }
+    &__title {
+        margin-top: 25px;
+        line-height: 53px;
+        text-align: start;
+    }
+    &__content-inner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 50% 25% 25%);
+        grid-gap: 0;
+        margin-bottom: 30px;
+    }
+    &__content-table {
+        font-size: 16px;
+        color: #a1a1a1;
+        border-bottom: 1px solid #e6e8e7;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    &__content-item {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e6e8e7;
+        position: relative;
+        &:last-child {
+            border: none;
+            margin-bottom: 0;
+        }
+    }
+    &__item-img {
+        max-width: 90px;
+        max-height: 100px;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+    &__item-title {
+        max-width: 265px;
+        font-size: 18px;
+        line-height: 24px;
+        @extend %mont_heavydemo-600;
+    }
+    &__item-number {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+    &__item-price {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+    &__item-trash {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+        border: none;
+        background: url("../images/trash.svg");
+        cursor: pointer;
+    }
+    &__content-link {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 17px;
+        color: #a1a1a1;
+        @extend %mont_heavydemo-600;
+        text-align: center;
+        margin-bottom: 170px;
+        padding: 17px 78px;
+        border: 1px solid #a1a1a1;
+    }
+    &__total {
+        max-width: 445px;
+        max-height: 330px;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: 0;
+            width: 165px;
+            height: 120px;
+            background: no-repeat bottom url("../images/cart-total.svg");
+        }
+    }
+    &__total-top {
+        border-bottom: 1px solid #e6e8e7;
+        margin-bottom: 30px;
+    }
+    &__total-text {
+        font-size: 35px;
+        line-height: 33px;
+        margin: 25px 0 20px 30px;
+    }
+    &__total-price {
+        font-size: 40px;
+        line-height: 38px;
+        @extend %mont_heavydemo-600;
+        margin: 0 0 30px 30px;
+    }
+    &__total-span {
+        max-width: 260px;
+        font-size: 16px;
+        margin: 0 0 30px 40px;
+        font-weight: 600;
+        color: #a1a1a1;
+        padding-left: 65px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 48px;
+            height: 26px;
+            background: no-repeat url("../images/delivery.svg");
+        }
+    }
+    &__total-btn {
+        padding: 17px 80px;
+        margin: 0 auto;
+    }
+}
+
+// order.html-------------------------------------------
+
+.header-light {
+    height: 146px;
+    background: linear-gradient(285.45deg, #0b3f37 38.27%, #cb8d62 141.81%);
+    &__wrapper {
+        background: no-repeat url(../images/vector-fon.png);
+        background-size: cover;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.order {
+    &__inner {
+        position: relative;
+    }
+    &__title {
+        margin-top: 75px;
+    }
+    &__link {
+        position: absolute;
+        top: -15px;
+        left: 0;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 17px;
+        color: #a1a1a1;
+        @extend %mont_heavydemo-600;
+        text-align: center;
+        padding: 17px 78px;
+        border: 1px solid #a1a1a1;
+    }
+    &__registration {
+        max-width: 920px;
+        max-height: 123px;
+        background: #e6e8e7;
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &__registration-img {
+        min-width: 34px;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 25px 20px;
+    }
+    &__registration-box {
+        max-width: 302px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__registration-question {
+        font-size: 18px;
+        line-height: 21px;
+        @extend %mont_heavydemo-600;
+        margin-bottom: 10px;
+    }
+    &__registration-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: 85px;
+    }
+    .btn-enter {
+        padding: 18px 62px;
+        margin-right: 30px;
+    }
+    .btn-reg {
+        padding: 18px 35px;
+        margin-right: 0;
+    }
+    &__form-title {
+        font-size: 27px;
+        line-height: 26px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        padding-left: 55px;
+        position: relative;        
+    }
+    &__data-title {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            background: url("../images/order-1.png");
+        }
+    }
+    &__delivery-title {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            background: url("../images/order-2.png");
+        }
+    }
+    &__form-data {
+        max-width: 920px;
+        display: grid;
+        grid-template-columns: repeat(2, 35%);
+        grid-gap: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e6e8e7;
+    }
+    &__input {
+        max-width: 327px;
+        height: 50px;
+        padding: 16px 0 16px 20px;
+        font-size: 18px;
+        color: #a1a1a1;
+        font-weight: 600;
+    }
+    &__form-delivery {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer-light {
+    height: 230px;
+    background: linear-gradient(285.45deg, #0b3f37 38.27%, #cb8d62 141.81%);
+    &__wrapper {
+        background: url(../images/vector-fon.png);
+        background-size: cover;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo__img {
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    &__copyright-text {
+        width: 215px;
+        text-align: center;
+        color: #adadad;
+        margin-bottom: 20px;
     }
 }
 
