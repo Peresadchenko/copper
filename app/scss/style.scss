@@ -51,7 +51,7 @@
             &:hover {
                 border-bottom: 1px solid #e4a16f;
                 background: linear-gradient(92.09deg, #5e3928 -79.4%, #e4a16f 84.12%);
-                -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
                 color: #5e3928;
             }
@@ -534,7 +534,7 @@
         line-height: 48px;
         font-weight: 600;
         background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-left: 70px;
         margin-bottom: 35px;
@@ -571,7 +571,7 @@
         line-height: 29px;
         @extend %mont_heavydemo-600;
         background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &__quote-signature {
@@ -605,7 +605,7 @@
         line-height: 48px;
         @extend %mont_heavydemo-600;
         background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &__counter-namber {
@@ -613,7 +613,7 @@
         line-height: 240px;
         @extend %mont_heavydemo-600;
         background-image: url("../images/bg-counter-namber.jpg");
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
@@ -1019,15 +1019,7 @@
         cursor: pointer;
     }
     &__content-link {
-        display: inline-block;
-        font-size: 18px;
-        line-height: 17px;
-        color: #a1a1a1;
-        @extend %mont_heavydemo-600;
-        text-align: center;
         margin-bottom: 170px;
-        padding: 17px 78px;
-        border: 1px solid #a1a1a1;
     }
     &__total {
         max-width: 445px;
@@ -1097,6 +1089,7 @@
         justify-content: center;
     }
 }
+
 .order {
     &__inner {
         position: relative;
@@ -1112,15 +1105,11 @@
     &__link {
         position: absolute;
         top: -15px;
-        left: 0;
-        display: inline-block;
-        font-size: 18px;
-        line-height: 17px;
-        color: #a1a1a1;
-        @extend %mont_heavydemo-600;
-        text-align: center;
-        padding: 17px 78px;
-        border: 1px solid #a1a1a1;
+        left: 0;        
+    }
+    &__data {
+        width: 100%;
+        max-width: 920px;
     }
     &__registration {
         max-width: 920px;
@@ -1274,7 +1263,7 @@
     }
     &__form-item--active label {
         background: linear-gradient(65.81deg, #5e3928 -24.09%, #e4a16f 104.02%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 20px;
         @extend %mont_heavydemo-600;
@@ -1285,7 +1274,7 @@
     }
     &__checkout-product {
         height: 225px;
-        overflow-y: scroll;        
+        overflow-y: scroll;
         background: linear-gradient(360deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 30%);
     }
     &__checkout-item {
@@ -1337,10 +1326,10 @@
     }
     ::-webkit-scrollbar-track {
         background: $btn;
-        border-radius: 10px;        
+        border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(95.42deg, #5E3928 -2.56%, #E4A16F 63.17%);
+        background: linear-gradient(95.42deg, #5e3928 -2.56%, #e4a16f 63.17%);
         border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -1348,7 +1337,7 @@
     }
     &__checkout-total {
         position: relative;
-        
+
         padding-bottom: 30px;
         box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
         &::after {
@@ -1357,12 +1346,12 @@
             width: 165px;
             height: 115px;
             top: 0;
-            right: 0px;            
+            right: 0px;
             background: bottom no-repeat url("../images/cart-total.svg");
             z-index: -1;
         }
     }
-    &__checkout-form {     
+    &__checkout-form {
         padding-left: 30px;
         margin-bottom: 30px;
     }
@@ -1391,9 +1380,25 @@
         line-height: 33px;
         margin-bottom: 20px;
     }
+    &__checkout-boxPrice {
+        display: flex;
+        justify-content: space-between;
+    }
     &__checkout-priceTotal {
         font-size: 40px;
         line-height: 38px;
+        @extend %mont_heavydemo-600;
+    }
+    &__checkout-promo {
+        display: flex;
+        flex-direction: column;
+        margin-right: 35px;
+    }
+    &__checkout-promoСode {
+        color: $sale;
+        @extend %mont_heavydemo-600;
+    }
+    &__checkout-promoText {
         @extend %mont_heavydemo-600;
     }
     &__checkout-totalBtn {
@@ -1424,6 +1429,127 @@
         text-align: center;
         color: #adadad;
         margin-bottom: 20px;
+    }
+}
+
+// order-user.html-------------------------------------------
+
+.order-user {
+    &__registration-img {
+        padding: 0;
+    }
+    &__btn {
+        display: none;
+    }
+}
+
+// order-user.html-------------------------------------------
+
+.order-thanks {
+    &__inner {
+        margin-top: 105px;
+    }
+    &__img {
+        max-width: 376px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    &__title {
+        line-height: 53px;
+        margin-bottom: 40px;
+    }
+    &__text {
+        max-width: 345px;
+        font-size: 27px;
+        line-height: 26px;
+        font-weight: 600;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    &__btn {
+        max-width: 445px;
+        margin: 0 auto;
+        margin-bottom: 210px;
+        padding: 15px 185px;
+        text-align: center;
+    }
+}
+
+// enter.html-------------------------------------------
+
+.enter {
+    &__inner {        
+        margin-bottom: 215px;
+    }
+    &__btn-back {
+        margin: 70px 0 95px;
+    }
+    &__reg {
+        max-width: 445px;
+        margin: 0 auto;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
+    }
+    &__title {
+        font-size: 35px;
+        line-height: 37px;
+        padding: 40px 0 25px;
+        margin-bottom: 0;
+    }
+    &__form {
+        margin-bottom: 30px;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        max-width: 375px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding: 17px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $input;
+    }
+    &__link-pass {
+        text-align: center;
+        margin-bottom: 30px; 
+    }
+    &__forgot-pass {
+        font-size: 18px;
+        line-height: 16px;
+        font-weight: 600;
+        background: linear-gradient(65.81deg, #5e3928 -24.09%, #e4a16f 104.02%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;    
+        border-bottom: 1px solid #cb8d62;
+        padding-bottom: 3px;
+    }
+    &__btn {
+        max-width: 375px;
+        width: 100%;
+        padding: 15px 90px;
+        margin: 0 auto;
+        text-align: center;
+        border: none;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 35px;
+        background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    }
+    &__box-text {
+        font-size: 18px;
+        line-height: 17px;
+        font-weight: 600;
+        color: $default;
+    }
+    &__box-reg {        
+        font-size: 18px;
+        line-height: 17px;
+        @extend %mont_heavydemo-600;
+        color: $default;
     }
 }
 

@@ -65,7 +65,7 @@ body {
     padding-right: 15px;
     @extend %mont_heavydemo-600;
     background: linear-gradient(65.81deg, #5e3928 -24.09%, #e4a16f 104.02%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     &::after {
@@ -134,6 +134,16 @@ body {
     &:hover {
         box-shadow: 0px 0px 30px 0px rgba(196, 196, 196, 0.3);
     }
+}
+.btn-3 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 17px;
+    color: #a1a1a1;
+    @extend %mont_heavydemo-600;
+    text-align: center;
+    padding: 17px 78px;
+    border: 1px solid #a1a1a1;
 }
 
 .sales__btn,
@@ -406,13 +416,14 @@ body {
         padding: 13px 14px;
         background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
         color: $default;
-        border: none;&:hover {
+        border: none;
+        &:hover {
             color: $default;
         }
     }
 
     .pagination__next,
-    .pagination__prev {   
+    .pagination__prev {
         font-size: 16px;
         line-height: 19px;
         border: 1px solid $btn;
@@ -420,18 +431,17 @@ body {
         margin-right: 15px;
         margin-top: -1px;
         transition: all 0.5s;
-        
     }
     &__next {
-        background: center no-repeat url('../images/pagination-next.svg');
+        background: center no-repeat url("../images/pagination-next.svg");
         &:hover {
-            background: center no-repeat url('../images/pagination-next-hover.svg');
+            background: center no-repeat url("../images/pagination-next-hover.svg");
         }
     }
-    &__prev {        
-        background: center no-repeat url('../images/pagination-prev.svg');
+    &__prev {
+        background: center no-repeat url("../images/pagination-prev.svg");
         &:hover {
-            background: center no-repeat url('../images/pagination-prev-hover.svg');
+            background: center no-repeat url("../images/pagination-prev-hover.svg");
         }
     }
 }
