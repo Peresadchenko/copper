@@ -1,5 +1,7 @@
 $(function () {
 
+    //slider top-------------------------
+
     $('.top-slider__inner').slick({
         arrows: false,
         dots: true,
@@ -16,6 +18,7 @@ $(function () {
         $('.top-slider__inner').slick("slickNext");
     });
 
+    //slider sales-------------------------
 
     $('.sales-slider__inner').slick({
         arrows: false,
@@ -36,6 +39,7 @@ $(function () {
         $('.sales-slider__inner').slick("slickNext");
     });
 
+    //slider novelties-------------------------
 
     $('.novelties-slider__inner').slick({
         arrows: false,
@@ -56,6 +60,7 @@ $(function () {
         $('.novelties-slider__inner').slick("slickNext");
     });
 
+    //slider recommend-------------------------
 
     $('.recommend-slider__inner').slick({
         arrows: false,
@@ -76,7 +81,7 @@ $(function () {
         $('.recommend-slider__inner').slick("slickNext");
     });
 
-
+    //slider discounts-------------------------
 
     $('.discounts-slider__inner').slick({
         arrows: false,
@@ -97,6 +102,7 @@ $(function () {
         $('.discounts-slider__inner').slick("slickNext");
     });
 
+    //slider about-------------------------
 
     $('.about-slider__inner').slick({
         arrows: false,
@@ -163,4 +169,13 @@ $(function () {
         $(this).find('input').prop('checked', true);
         return false;
     });
+
+    //mixitup-------------------------
+
+    var mixer = mixitup('.profile', {
+        load: {
+            filter: '.category-a'
+        }
+    });
+
 });
