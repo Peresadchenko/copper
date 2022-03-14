@@ -1,5 +1,9 @@
 $(function () {
 
+    //form-styler-------------------------
+
+    $('.filter-price__select').styler();
+
     //slider top-------------------------
 
     $('.top-slider__inner').slick({
@@ -177,5 +181,7 @@ $(function () {
             filter: '.category-a'
         }
     });
+
+    
 
 });

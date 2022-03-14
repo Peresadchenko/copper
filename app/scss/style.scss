@@ -1763,4 +1763,72 @@
     }
 }
 
+// profile.html-------------------------------------------
+
+.catalog {
+    &__title {
+        padding-top: 25px;
+        line-height: 53px;
+        text-align: start;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        margin-bottom: 55px;
+    }
+    &__item {
+        margin: 0 30px 30px 0;
+    }
+
+    // &__btn {
+    //     max-width: 325px;
+    //     max-height: 145px;
+    //     width: 100%;
+    //     border: none;
+    //     position: relative;
+    //     padding: 0;
+    //     margin-right: 30px;
+    //     cursor: pointer;
+    //     &:last-child {
+    //         margin-right: 0;
+    //     }
+    //     &::after {
+    //         content: "";
+    //         position: absolute;
+    //         width: 100%;
+    //         height: 100%;
+    //         top: 0;
+    //         left: 0;
+    //         background: linear-gradient(360deg, rgba(7, 44, 38, 0.5) 0%, rgba(7, 44, 38, 0) 80%);
+    //         z-index: 1;
+    //     }
+    // }
+    // .mixitup-control-active {
+    //     background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+    // }
+    // &__btn-img {
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     object-position: center;
+    // }
+    // &__btn-imgD {
+    //     transform: rotate(90deg);
+    // }
+    // &__btn-title {
+    //     position: absolute;
+    //     bottom: 20px;
+    //     left: 60px;
+    //     font-size: 20px;
+    //     @extend %mont_heavydemo-600;
+    //     color: $default;
+    //     z-index: 2;
+    // }
+}
+
 @import "media";
