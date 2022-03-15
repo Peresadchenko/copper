@@ -1,3 +1,127 @@
 // @media (max-width: 1150px) {
 
 // }
+@media (max-width: 1400px) {
+    .contact {
+        &__form {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .contact {
+        &__top {
+            margin-bottom: 20px;
+        }
+        &__form-box {
+            margin-bottom: 50px;
+        }
+        &__form map {
+            height: 350px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .contact {
+        &__form-box {
+            margin: 30px auto;
+        }
+        &__top-item {
+            padding: 40px 10px 40px;
+        }
+        &__top-item:hover {
+            padding: 40px 10px 40px;
+        }
+        &__top-text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__textbox {
+            justify-content: space-between;
+        }
+        &__input {
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        &__form {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contact {
+        &__top {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__top-img {
+            margin-bottom: 20px;
+        }
+        &__top-title {
+            margin-bottom: 10px;
+        }
+        &__textbox {
+            flex-direction: column;
+        }
+        &__top-item {
+            padding: 20px 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__top-item:hover {
+            padding: 20px 10px 20px;
+        }
+        &__input {
+            margin-right: 0;
+            width: 100%;
+            padding-right: 71px;
+        }
+        &__input-name::before {
+            right: 20px;
+        }
+        &__input-mail::before {
+            right: 20px;
+        }
+        &__textarea-wraper::before {
+            right: 20px;
+        }
+        &__form-box {
+            width: 100%;
+        }
+        .contact__textarea {
+            width: 100%;
+            padding-right: 71px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contact {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__top-item {
+            width: 100%;
+        }
+        &__btn {
+            padding: 15px 80px;
+            margin: 0 auto;
+        }
+        &__form #map {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contact {
+        &__top-title {
+            font-size: 18px;
+        }
+    }
+}
