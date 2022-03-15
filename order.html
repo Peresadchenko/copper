@@ -25,54 +25,196 @@
     <div class="container">
       <div class="order__inner">
         <h1 class="order__title title">Оформить заказ</h1>
-        <a class="order__link" href="#">Назад к покупкам</a>
-        <div class="order__content">
+        <a class="order__link btn-3" href="#">Назад к покупкам</a>
+        <div class="order__inner-box">
+          <form class="order__form-box" action="#" method="post" enctype="multipart/form-data">
 
-          <div class="order__registration">
-            <img class="order__registration-img" src="images/user.svg" alt="">
-            <div class="order__registration-box">
-              <p class="order__registration-question">Уже есть аккаунт или хотите зарегистрироваться?</p>
-              <p class="order__registration-text">Войдите в кабинет и получите скидку </p>
+            <div class="order__data">
+
+              <div class="order__registration">
+                <img class="order__registration-img" src="images/user.svg" alt="">
+                <div class="order__registration-box">
+                  <p class="order__registration-question">Уже есть аккаунт или хотите зарегистрироваться?</p>
+                  <p class="order__registration-text">Войдите в кабинет и получите скидку </p>
+                </div>
+                <div class="order__registration-buttons">
+                  <a class="order__registration-btn btn btn-enter" href="enter.html">Войти</a>
+                  <a class="order__registration-btn btn-2 btn-reg" href="reg.html">Регистрация</a>
+                </div>
+              </div>
+
+              <div class="order__form">
+                <p class="order__form-title order__data-title">Личные данные</p>
+
+                <div class="order__form-data">
+
+                  <input class="order__input-data" required placeholder="Имя" name="name" type="text">
+                  <input class="order__input-data" required placeholder="Фамилия" name="surname" type="text">
+                  <input class="order__input-data" required placeholder="Телефон" name="phone" type="tel">
+                  <input class="order__input-data" required placeholder="E-mail" name="email" type="email">
+                  <input class="order__input-data" required placeholder="Страна" name="country" type="text">
+                  <input class="order__input-data" required placeholder="Город" name="city" type="text">
+                </div>
+
+              </div>
+
+              <div class="order__form">
+                <p class="order__form-title order__delivery-title">Доставка</p>
+                <div class="order__form-radio">
+                  <div class="order__form-item">
+                    <input class="order__input-delivery" type="radio" name="delivery" value="pickup" checked>
+                    <label class="order__input-choice" for="deliveryChoice1">Самовывоз</label>
+                    <p class="order__delivery-text">Вы можете забрать из нашего официального магазина по адресу Бажана
+                      8-Б,
+                      Киев, 02132 Украина
+                    </p>
+                  </div>
+                  <div class="order__form-item">
+                    <input class="order__input-delivery" type="radio" name="delivery" value="new">
+                    <label class="order__input-choice" for="deliveryChoice2">Новая почта</label>
+                    <p class="order__delivery-text">Вы можете забрать из нашего официального магазина по адресу Бажана
+                      8-Б,
+                      Киев, 02132 Украина
+                    </p>
+                  </div>
+                  <div class="order__form-item">
+                    <input class="order__input-delivery" type="radio" name="delivery" value="сourier">
+                    <label class="order__input-choice" for="deliveryChoice2">Курьер “Новая почта”</label>
+                    <p class="order__delivery-text">Вы можете забрать из нашего официального магазина по адресу Бажана
+                      8-Б,
+                      Киев, 02132 Украина
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__form">
+                <p class="order__form-title order__payment-title">Оплата</p>
+                <div class="order__form-radio radio-payment">
+                  <div class="order__form-item">
+                    <input class="order__input-payment" type="radio" name="payment" value="receiving" checked>
+                    <label class="order__input-choice" for="paymentChoice1">При получении</label>
+                  </div>
+                  <div class="order__form-item">
+                    <input class="order__input-payment" type="radio" name="payment" value="online">
+                    <label class="order__input-choice" for="paymentChoice1">Онлайн-оплата картой</label>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div class="order__registration-buttons">
-              <a class="order__registration-btn btn btn-enter" href="#">Войти</a>
-              <a class="order__registration-btn btn-2 btn-reg" href="#">Регистрация</a>
+
+            <div class="order__checkout">
+              <div class="order__checkout-product">
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price">1 953 грн</span>
+                        <p class="order__checkout-price item-price__sale">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price"></span>
+                        <p class="order__checkout-price">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price">1 953 грн</span>
+                        <p class="order__checkout-price item-price__sale">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price">1 953 грн</span>
+                        <p class="order__checkout-price item-price__sale">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price">1 953 грн</span>
+                        <p class="order__checkout-price item-price__sale">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order__checkout-item">
+                  <img class="order__checkout-img" src="images/products/01.png" alt="фото товара">
+                  <div class="order__checkout-box">
+                    <p class="order__checkout-titel">Дистиллятор для получения гидролата 8л</p>
+                    <div class="order__checkout-box2">
+                      <p class="order__checkout-number">2 шт.</p>
+                      <div class="order__checkout-priceBox">
+                        <span class="order__checkout-sale sale-price">1 953 грн</span>
+                        <p class="order__checkout-price item-price__sale">5 000 грн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="order__checkout-total">
+                <div class="order__checkout-form">
+                  <input class="order__checkout-input" placeholder="Введите прокод" type="text">
+                  <button class="order__checkout-btn btn" type="submit">Применить</button>
+                </div>
+                <div class="order__checkout-boxTotal">
+                  <p class="order__checkout-text">Итого</p>
+                  <div class="order__checkout-boxPrice">
+                    <p class="order__checkout-priceTotal">10 953 грн</p>
+                    <div class="order__checkout-promo">
+                      <span class="order__checkout-promoСode"></span>
+                      <span class="order__checkout-promoText"></span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <p class="order__checkout-delivery cart__total-span">У вас бесплатная доставка!</p>
+                <button class="order__checkout-totalBtn btn" type="submit">Оформить заказ</button>
+              </div>
             </div>
-          </div>
 
-          <div class="order__form">
-            <p class="order__form-title order__data-title">Личные данные</p>
-            <form class="order__form-data">
-              <input class="order__input" placeholder="Имя" type="text">
-              <input class="order__input" placeholder="Фамилия" type="text">
-              <input class="order__input" placeholder="Телефон" type="tel">
-              <input class="order__input" placeholder="E-mail" type="email">
-              <input class="order__input" placeholder="Страна" type="text">
-              <input class="order__input" placeholder="Город" type="text">
-            </form>
-          </div>
-
-          <div class="order__form">
-            <p class="order__form-title order__delivery-title">Доставка</p>
-            <form class="order__form-delivery">
-              <div class=""><input type="radio" name="delivery" value="pickup" checked>Самовывоз
-                <p class="">Вы можете забрать из нашего официального магазина по адресу Бажана 8-Б, Киев, 02132 Украина
-                </p>
-              </div>
-              <div class="">
-                <input type="radio" name="delivery" value="new">Новая почта
-                <p class="">Вы можете забрать из нашего официального магазина по адресу Бажана 8-Б, Киев, 02132 Украина
-                </p>
-              </div>
-              <div class="">
-                <input type="radio" name="delivery" value="сourier">Курьер “Новая почта”
-                <p class="">Вы можете забрать из нашего официального магазина по адресу Бажана 8-Б, Киев, 02132 Украина
-                </p>
-              </div>
-            </form>
-          </div>
-
-
+          </form>
 
         </div>
       </div>
@@ -83,7 +225,7 @@
     <div class="footer-light__wrapper">
       <div class="container">
         <div class="footer-light__inner">
-          <a class="logo" href="#">
+          <a class="logo" href="index.html">
             <img class="logo__img" src="images/logo.png" alt="логотип">
           </a>
           <p class="footer-light__copyright-text">© 2021 “Copper Pro” Все права защищенны</p>
