@@ -107,7 +107,7 @@ body {
 
 .btn {
     display: block;
-    border: 1px solid none;
+    border: none;
     color: $default;
     background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
     padding: 15px 130px;
@@ -283,6 +283,10 @@ body {
     &__btnPrev:hover:before {
         opacity: 1;
     }
+}
+
+.product-slide__thumb-btnPrev {
+    position: absolute;
 }
 
 .product-box {

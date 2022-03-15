@@ -4,6 +4,10 @@ $(function () {
 
     $('.filter-price__select').styler();
 
+    //.card-product__content-num--------------------
+
+    $('.select-style, .card-product__content-num').styler();
+
     //slider top-------------------------
 
     $('.top-slider__inner').slick({
@@ -127,8 +131,30 @@ $(function () {
         $('.about-slider__inner').slick("slickNext");
     });
 
+    //product-slide__thumb  product-slide__big-------------------------
 
+    $('.product-slide__thumb').slick({
+        asNavFor: '.product-slide__big',
+        focusOnSelect: true,
+        slidesToShow: 4.6,
+        slidesToScroll: 1,
+        arrows: false,
+        vertical: true
 
+    });
+    $('.product-slide__big').slick({
+        asNavFor: '.product-slide__thumb',
+        draggable: false,
+        arrows: false,
+        fade: true
+    });
+
+    $('.product-slide__thumb-btnPrev').click(function (event) {
+        $('.product-slide__thumb').slick("slickPrev");
+    });
+    $('.product-slide__thumb-btnNext').click(function (event) {
+        $('.product-slide__thumb').slick("slickNext");
+    });
 
     //SCROLL--------------------
 
@@ -139,7 +165,7 @@ $(function () {
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 
-
+    
 
     //CHECKBOX--------------------
 
@@ -182,6 +208,6 @@ $(function () {
         }
     });
 
-    
+
 
 });
