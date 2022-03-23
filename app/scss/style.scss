@@ -789,7 +789,7 @@
     &__items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 335px);
+        grid-template-rows: repeat( 335px);
         grid-gap: 30px;
         margin-bottom: 45px;
     }
@@ -857,13 +857,22 @@
         display: flex;
         margin-bottom: 50px;
     }
-    &__share {
+    &__social-bottom {
+        display: flex;
+    }
+    &__share-title {
         font-size: 16px;
         @extend %mont_heavydemo-600;
         text-transform: uppercase;
-        margin-right: 50px;
+        margin: 0 50px 10px 0;
+    }
+    &__share-box {
+        display: flex;
+
     }
     &__share-img {
+        max-width: 20px;
+        width: 100%;
         opacity: 1;
         transition: all 0.3s;
         &:hover {
@@ -929,6 +938,7 @@
         }
     }
     &__prev-link {
+        max-width: 350px;
         padding-left: 30px;
         position: relative;
         transition: all 0.3s;
@@ -1471,10 +1481,11 @@
 
 .order-thanks {
     &__inner {
-        margin-top: 105px;
+        margin: 105px 0 210px;
     }
     &__img {
         max-width: 376px;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 15px;
     }
@@ -1494,8 +1505,6 @@
     &__btn {
         max-width: 445px;
         margin: 0 auto;
-        margin-bottom: 210px;
-        padding: 15px 185px;
         text-align: center;
     }
 }
@@ -1507,7 +1516,10 @@
         margin-bottom: 215px;
     }
     &__btn-back {
+        max-width: 327px;
+        width: 100%;
         margin: 70px 0 95px;
+        padding: 17px 30px;
     }
     &__reg {
         max-width: 445px;
@@ -1522,6 +1534,7 @@
     }
     &__form {
         margin-bottom: 30px;
+        padding: 20px;
     }
     &__input {
         display: block;
@@ -1558,7 +1571,7 @@
     &__btn {
         max-width: 375px;
         width: 100%;
-        padding: 15px 90px;
+        padding: 15px 60px;
         margin: 0 auto;
         text-align: center;
         border: none;

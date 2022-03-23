@@ -48,10 +48,11 @@ body {
     border: none;
     color: $default;
     background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-    padding: 15px 130px;
+    padding: 15px 100px;
     max-width: 327px;
     font-size: 18px;
     @extend %mont_heavydemo-600;
+    text-align: center;
     cursor: pointer;
     transition: all 0.5s;
     position: relative;
@@ -429,6 +430,7 @@ body {
     padding-top: 40px;
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
     &__item {
         padding-right: 30px;
@@ -461,7 +463,7 @@ body {
 .pagination {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin: 0 0 80px 15px;
     .pagination__list {
         display: flex;
         align-items: center;
