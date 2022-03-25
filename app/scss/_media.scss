@@ -1,4 +1,4 @@
-// ----------------------------------------------------
+// 1600----------------------------------------------------
 
 @media (max-width: 1600px) {
     .top-slider__content {
@@ -21,9 +21,19 @@
             right: 400px;
         }
     }
+
+    .history__wrapper::before {
+        font-size: 105px;
+        line-height: 85px;
+        bottom: 215px;
+    }
+
+    .geography__img {
+        max-width: 965px;
+    }
 }
 
-// ----------------------------------------------------
+// 1400----------------------------------------------------
 
 @media (max-width: 1400px) {
     .contact {
@@ -65,9 +75,66 @@
             padding: 25px 20px;
         }
     }
+
+    .about-us {
+        &__inner {
+            display: block;
+        }
+        &__img {
+            margin-left: auto;
+            margin-top: -100px;
+        }
+    }
+
+    .clients {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__content {
+            margin-bottom: 90px;
+        }
+        &__content-title {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    .history__wrapper::before {
+        display: none;
+    }
+
+    .geography {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+        }
+        &__content {
+            margin-bottom: 50px;
+        }
+        &__title {
+            margin: 75px auto 20px;
+            text-align: center;
+        }
+        &__text {
+            max-width: 610px;
+            text-align: center;
+        }
+    }
 }
 
-// ----------------------------------------------------
+// 1200----------------------------------------------------
+
+@media (max-width: 1200px) {
+    .values__image::before {
+        font-size: 105px;
+        line-height: 80px;
+    }
+}
+
+// 1050----------------------------------------------------
 
 @media (max-width: 1050px) {
     .top-slider,
@@ -224,6 +291,44 @@
         }
     }
 
+    .about-us {
+        margin-bottom: 70px;
+        .title-h1 {
+            font-size: 60px;
+            line-height: 45px;
+        }
+        &__title {
+            max-width: 435px;
+            padding: 100px 0 30px;
+            margin-bottom: 40px;
+        }
+        &__img {
+            max-width: 500px;
+            margin-top: 25px;
+            margin-right: 0;
+        }
+        &__quote {
+            max-width: 335px;
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 80px;
+        }
+        &__quote-author {
+            font-size: 18px;
+            line-height: 17px;
+        }
+        &__quote-signature {
+            max-width: 145px;
+        }
+    }
+
+    .values {
+        &__title {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+
     .contact {
         &__top {
             margin-bottom: 20px;
@@ -252,7 +357,7 @@
     }
 }
 
-// ----------------------------------------------------
+// 980----------------------------------------------------
 
 @media (max-width: 980px) {
     .top-slider {
@@ -310,6 +415,14 @@
         }
     }
 
+    .values {
+        &__image::before {
+            max-width: 400px;
+            font-size: 95px;
+            line-height: 70px;
+        }
+    }
+
     .contact {
         &__form-box {
             margin: 30px auto;
@@ -337,7 +450,7 @@
     }
 }
 
-// ----------------------------------------------------
+// 768----------------------------------------------------
 
 @media (max-width: 768px) {
     .title {
@@ -552,6 +665,98 @@
         }
     }
 
+    .about-us {
+        margin-bottom: 40px;
+        .title-h1 {
+            font-size: 30px;
+            line-height: 22px;
+        }
+        &__title {
+            max-width: 155px;
+            padding: 40px 0 20px;
+            margin-bottom: 15px;
+        }
+        &__quote {
+            max-width: 215px;
+            font-size: 20px;
+            margin-left: 60px;
+            margin-bottom: 15px;
+            &::after {
+                left: -50px;
+            }
+        }
+        &__quote-signature {
+            max-width: 90px;
+        }
+        &__img {
+            max-width: 350px;
+        }
+    }
+
+    .clients {
+        &__inner {
+            margin-bottom: 25px;
+        }
+        &__counter-title {
+            font-size: 25px;
+            line-height: 24px;
+        }
+        &__counter-namber {
+            font-size: 140px;
+            line-height: 120px;
+        }
+        &__content-text {
+            font-size: 16px;
+        }
+        &__counter-title {
+            margin-bottom: 15px;
+        }
+        &__content {
+            margin-bottom: 50px;
+        }
+    }
+
+    .history {
+        .title {
+            font-size: 40px;
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
+        &__box {
+            display: block;
+        }
+        &__box-text {
+            max-width: none;
+        }
+    }
+
+    .values {
+        &__inner {
+            display: block;
+            margin: 40px;
+        }
+        &__image {
+            margin-bottom: 25px;
+            &::before {
+                right: 0;
+            }
+        }
+        &__img {
+            max-width: none;
+            padding-right: 0;
+        }
+        &__content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__title,
+        &__text {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
     .pagination {
         margin-bottom: 40px;
     }
@@ -561,7 +766,7 @@
     }
 }
 
-// ----------------------------------------------------
+// 650----------------------------------------------------
 
 @media (max-width: 650px) {
     .title {
@@ -814,7 +1019,41 @@
         }
         &__content-price {
             text-align: end;
-            margin-top: -45px; 
+            margin-top: -45px;
+        }
+    }
+
+    .history {
+        .title {
+            font-size: 24px;
+        }
+    }
+
+    .clients {
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+
+    .geography {
+        &__title {
+            margin: 40px auto 10px;
+        }
+    }
+
+    .values {
+        &__title {
+            margin-bottom: 5px;
+        }
+        &__content-box {
+            max-width: 230PX;
+        }
+        &__item {
+            font-size: 16px;
+            padding-left: 70px;
+        }
+        &__item-1::after {
+            top: -20px;
         }
     }
 
@@ -995,6 +1234,24 @@
         }
         &__btn {
             width: 100%;
+        }
+    }
+
+    .clients {
+        &__counter-namber {
+            font-size: 100px;
+            line-height: 96px;
+        }
+        &__counter-title {
+            font-size: 18px;
+            line-height: 17px;
+        }
+    }
+
+    .values {
+        &__image::before {
+            font-size: 70PX;
+            line-height: 55px;
         }
     }
 

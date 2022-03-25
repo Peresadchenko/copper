@@ -708,6 +708,7 @@
     }
     &__image {
         position: relative;
+        height: fit-content;
         &::before {
             content: "COPPER PRO";
             position: absolute;
@@ -716,17 +717,17 @@
             color: $default;
             @extend %Lighthaus-400;
             text-align: end;
-            bottom: -20px;
+            bottom: 0;
             right: 35px;
             width: 660px;
-            height: 240px;
             z-index: 3;
         }
     }
     &__img {
         max-width: 685px;
+        width: 100%;
         object-fit: cover;
-        margin-right: 30px;
+        padding-right: 30px;
     }
     &__title {
         max-width: 295px;
@@ -766,6 +767,9 @@
         top: -5px;
         left: 0;
         background: no-repeat url("../images/icons/values-item-2.svg");
+    }
+    &__item-3 {
+        margin-bottom: 0;
     }
     &__item-3::after {
         content: "";
@@ -1404,6 +1408,9 @@
         border: 1px solid $input;
         border-right: none;
         margin-top: 40px;
+    }
+    &__checkout-delivery {
+        margin-left: 30px;
     }
     &__checkout-btn {
         display: inline-block;
