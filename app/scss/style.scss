@@ -1008,7 +1008,7 @@
         border-bottom: 1px solid #e6e8e7;
         padding-bottom: 20px;
     }
-    &__content-item {        
+    &__content-item {
         height: 140px;
         max-height: 100%;
         align-items: center;
@@ -1966,7 +1966,6 @@
     &__social-img {
         margin-right: 18px;
     }
-
     &__description-box {
         border-bottom: 1px solid #e6e8e7;
         padding-bottom: 70px;
@@ -2019,10 +2018,12 @@
         }
     }
     &__big {
-        width: 565px;
+        max-width: 565px;
+        width: 100%;
+        height: 610px;
         img {
-            width: 565px;
-            height: 626px;
+            width: 100%;
+            height: 610px;
             object-fit: cover;
         }
     }
@@ -2043,6 +2044,12 @@
         height: 27px;
         border: none;
         background: no-repeat url("../images/icons/product-slide-btnPrev.png");
+    }
+    .product-box__item-sale--active {
+        left: 15px;
+    }
+    .product-box__item-like {
+        right: 15px;
     }
 }
 

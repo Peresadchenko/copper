@@ -351,13 +351,21 @@ $(function () {
     //product-slide__thumb  product-slide__big-------------------------
 
     $('.product-slide__thumb').slick({
+        responsive: [
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ],
         asNavFor: '.product-slide__big',
         focusOnSelect: true,
         slidesToShow: 4.6,
         slidesToScroll: 1,
         arrows: false,
         vertical: true
-
     });
     $('.product-slide__big').slick({
         asNavFor: '.product-slide__thumb',
