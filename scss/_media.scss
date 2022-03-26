@@ -1,4 +1,4 @@
-// ----------------------------------------------------
+// 1600----------------------------------------------------
 
 @media (max-width: 1600px) {
     .top-slider__content {
@@ -21,9 +21,19 @@
             right: 400px;
         }
     }
+
+    .history__wrapper::before {
+        font-size: 105px;
+        line-height: 85px;
+        bottom: 215px;
+    }
+
+    .geography__img {
+        max-width: 965px;
+    }
 }
 
-// ----------------------------------------------------
+// 1400----------------------------------------------------
 
 @media (max-width: 1400px) {
     .contact {
@@ -65,9 +75,76 @@
             padding: 25px 20px;
         }
     }
+
+    .about-us {
+        &__inner {
+            display: block;
+        }
+        &__img {
+            margin-left: auto;
+            margin-top: -100px;
+        }
+    }
+
+    .clients {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__content {
+            margin-bottom: 90px;
+        }
+        &__content-title {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    .history__wrapper::before {
+        display: none;
+    }
+
+    .geography {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+        }
+        &__content {
+            margin-bottom: 50px;
+        }
+        &__title {
+            margin: 75px auto 20px;
+            text-align: center;
+        }
+        &__text {
+            max-width: 610px;
+            text-align: center;
+        }
+    }
+
+    .card-product {
+        &__top-box {
+            display: block;
+            padding-bottom: 25px;
+        }
+        &__slide {
+            margin-bottom: 45px;
+        }
+    }
 }
 
-// ----------------------------------------------------
+// 1200----------------------------------------------------
+
+@media (max-width: 1200px) {
+    .values__image::before {
+        font-size: 105px;
+        line-height: 80px;
+    }
+}
+
+// 1050----------------------------------------------------
 
 @media (max-width: 1050px) {
     .top-slider,
@@ -158,6 +235,110 @@
         }
     }
 
+    .enter {
+        &__inner {
+            margin-bottom: 55px;
+        }
+        &__form {
+            padding-bottom: 0;
+        }
+        &__btn-back {
+            margin: 30px 0 55px;
+        }
+        &__title {
+            padding: 40px 0 5px;
+        }
+    }
+
+    .order-thanks {
+        &__inner {
+            margin: 55px 0 40px;
+        }
+    }
+
+    .news {
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 35px;
+        }
+        &__item {
+            max-width: 100%;
+        }
+    }
+
+    .news-detalis {
+        &__title {
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+
+    .cart {
+        padding-bottom: 80px;
+        .title {
+            margin-bottom: 20px;
+        }
+        &__inner {
+            display: block;
+        }
+        &__total {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        &__total-top {
+            text-align: center;
+        }
+        &__total-span {
+            max-width: 327px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        &__content-link {
+            max-width: 327px;
+            padding: 17px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .about-us {
+        margin-bottom: 70px;
+        .title-h1 {
+            font-size: 60px;
+            line-height: 45px;
+        }
+        &__title {
+            max-width: 435px;
+            padding: 100px 0 30px;
+            margin-bottom: 40px;
+        }
+        &__img {
+            max-width: 500px;
+            margin-top: 25px;
+            margin-right: 0;
+        }
+        &__quote {
+            max-width: 335px;
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 80px;
+        }
+        &__quote-author {
+            font-size: 18px;
+            line-height: 17px;
+        }
+        &__quote-signature {
+            max-width: 145px;
+        }
+    }
+
+    .values {
+        &__title {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+
     .contact {
         &__top {
             margin-bottom: 20px;
@@ -186,7 +367,7 @@
     }
 }
 
-// ----------------------------------------------------
+// 980----------------------------------------------------
 
 @media (max-width: 980px) {
     .top-slider {
@@ -205,6 +386,34 @@
             right: 100px;
         }
     }
+
+    .news-detalis {
+        .title {
+            margin-bottom: 15px;
+        }
+        &__share-title {
+            margin-right: 15px;
+        }
+        &__social {
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 30px;
+        }
+        &__item-img {
+            margin-bottom: 30px;
+        }
+        &__item-subtitle {
+            margin: 35px 0 20px 0;
+        }
+        &__prev-link,
+        &__next-link {
+            max-width: 225px;
+        }
+        &__prev-link::after,
+        &__next-link::after {
+            top: 10px;
+        }
+    }
 }
 
 // ----------------------------------------------------
@@ -213,6 +422,14 @@
     .promotions {
         &__img {
             right: 50px;
+        }
+    }
+
+    .values {
+        &__image::before {
+            max-width: 400px;
+            font-size: 95px;
+            line-height: 70px;
         }
     }
 
@@ -243,7 +460,7 @@
     }
 }
 
-// ----------------------------------------------------
+// 768----------------------------------------------------
 
 @media (max-width: 768px) {
     .title {
@@ -317,6 +534,10 @@
         }
     }
 
+    .header-light {
+        height: 95px;
+    }
+
     .products__item-title {
         font-size: 18px;
         line-height: 20px;
@@ -361,9 +582,216 @@
             padding: 15px 30px;
         }
     }
+
+    .enter {
+        &__box {
+            padding: 24px 20px;
+        }
+        &__box-text {
+            font-size: 16px;
+        }
+        &__box-reg {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        &__btn-back {
+            margin: 20px 0 40px;
+        }
+        &__btn-back {
+            max-width: 290px;
+        }
+        &__title {
+            padding: 30px 0 5px;
+        }
+        .title {
+            margin-bottom: 0;
+        }
+    }
+
+    .news {
+        .title {
+            margin-bottom: 30px;
+        }
+        &__item-title {
+            font-size: 14px;
+            line-height: 14px;
+            bottom: 10px;
+            left: 10px;
+        }
+        &__item-img {
+            min-height: 105px;
+        }
+    }
+
+    .news-detalis {
+        .title {
+            line-height: 30px;
+        }
+        &__title-box {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        &__item-box3 {
+            flex-wrap: wrap;
+        }
+        &__social {
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        &__social-bottom {
+            order: 2;
+        }
+        &__item {
+            margin-bottom: 20px;
+        }
+        &__item-img {
+            min-height: 107px;
+        }
+        &__item-subtitle {
+            margin: 10px 0 20px 0;
+        }
+        &__item-text {
+            margin-bottom: 15px;
+        }
+        &__item-date {
+            top: 0;
+        }
+        &__prev-link,
+        &__next-link {
+            font-size: 14px;
+            line-height: 15px;
+            max-width: 220px;
+            margin-bottom: 15px;
+        }
+        &__prev-link::after,
+        &__next-link::after {
+            top: 5px;
+        }
+        &__social-bottom {
+            justify-content: center;
+            width: 100%;
+            padding-top: 20px;
+            border-top: 1px solid #e6e8e7;
+        }
+    }
+
+    .about-us {
+        margin-bottom: 40px;
+        .title-h1 {
+            font-size: 30px;
+            line-height: 22px;
+        }
+        &__title {
+            max-width: 155px;
+            padding: 40px 0 20px;
+            margin-bottom: 15px;
+        }
+        &__quote {
+            max-width: 215px;
+            font-size: 20px;
+            margin-left: 60px;
+            margin-bottom: 15px;
+            &::after {
+                left: -50px;
+            }
+        }
+        &__quote-signature {
+            max-width: 90px;
+        }
+        &__img {
+            max-width: 350px;
+        }
+    }
+
+    .clients {
+        &__inner {
+            margin-bottom: 25px;
+        }
+        &__counter-title {
+            font-size: 25px;
+            line-height: 24px;
+        }
+        &__counter-namber {
+            font-size: 140px;
+            line-height: 120px;
+        }
+        &__content-text {
+            font-size: 16px;
+        }
+        &__counter-title {
+            margin-bottom: 15px;
+        }
+        &__content {
+            margin-bottom: 50px;
+        }
+    }
+
+    .history {
+        .title {
+            font-size: 40px;
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
+        &__box {
+            display: block;
+        }
+        &__box-text {
+            max-width: none;
+        }
+    }
+
+    .values {
+        &__inner {
+            display: block;
+            margin: 40px;
+        }
+        &__image {
+            margin-bottom: 25px;
+            &::before {
+                right: 0;
+            }
+        }
+        &__img {
+            max-width: none;
+            padding-right: 0;
+        }
+        &__content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__title,
+        &__text {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    .card-product {
+        &__description-box {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        .product-slide__thumb {
+            margin-right: 0;
+        }
+        .product-slide__big {
+            max-width: 500px;
+            max-height: 610px;
+            height: 100%;
+        }
+    }
+
+    .pagination {
+        margin-bottom: 40px;
+    }
+
+    .footer-light {
+        height: 190px;
+    }
 }
 
-// ----------------------------------------------------
+// 650----------------------------------------------------
 
 @media (max-width: 650px) {
     .title {
@@ -417,7 +845,7 @@
                 justify-content: normal;
                 background: linear-gradient(270deg, #5e3928 20.13%, #e4a16f 92.93%);
                 margin: 0;
-                padding-top: 220px;
+                padding-top: 160px;
                 z-index: 5;
                 transition: all 0.3s;
                 &.menu__list--active {
@@ -552,9 +980,154 @@
         margin-bottom: 40px;
     }
 
+    .order-thanks {
+        &__title {
+            font-size: 40px;
+        }
+    }
+
+    .news-detalis {
+        &__prev-link,
+        &__next-link {
+            max-width: 108px;
+        }
+        &__prev-link::after,
+        &__next-link::after {
+            top: 17px;
+        }
+    }
+
+    .cart {
+        padding-bottom: 40px;
+        .title {
+            margin-bottom: 0;
+        }
+        &__content-table {
+            display: none;
+        }
+        &__total-top {
+            text-align: start;
+        }
+        &__total-box {
+            padding: 20px;
+        }
+        &__total-text {
+            font-size: 24px;
+            line-height: 23px;
+            margin-bottom: 10px;
+        }
+        &__total-price {
+            font-size: 30px;
+            line-height: 28px;
+        }
+        &__total::after {
+            background-size: cover;
+            width: 70px;
+            height: 55px;
+        }
+        &__content-item {
+            height: auto;
+            display: block;
+            padding: 20px 0;
+            &:last-child {
+                border-bottom: 1px solid #e6e8e7;
+            }
+        }
+        &__content-name {
+            margin-bottom: 20px;
+        }
+        &__content-price {
+            text-align: end;
+            margin-top: -45px;
+        }
+    }
+
+    .history {
+        .title {
+            font-size: 24px;
+        }
+    }
+
+    .clients {
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+
+    .geography {
+        &__title {
+            margin: 40px auto 10px;
+        }
+    }
+
+    .values {
+        &__title {
+            margin-bottom: 5px;
+        }
+        &__content-box {
+            max-width: 230px;
+        }
+        &__item {
+            font-size: 16px;
+            padding-left: 70px;
+        }
+        &__item-1::after {
+            top: -20px;
+        }
+    }
+
+    .card-product {
+        &__price-text {
+            font-size: 24px;
+            line-height: 23px;
+        }
+        &__price {
+            font-size: 24px;
+            line-height: 23px;
+            margin-right: 15px;
+        }
+        &__sale {
+            font-size: 18px;
+            line-height: 17px;
+        }
+        &__content-btn {
+            max-width: 250px;
+            text-align: center;
+            padding: 15px;
+        }
+        &__top-box {
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+        &__description-title {
+            margin-bottom: 15px;
+        }
+        &__content-form {
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        &__content-subtitle {
+            margin-bottom: 0;
+        }
+        .product-slide__big {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        .product-slide__thumb {
+            max-height: 300px;
+        }
+        .product-slide__big img {
+            height: 300px;
+        }
+    }
+
     .about {
         &__title {
-            margin-bottom: 0;
+            margin-bottom: 20px;
+        }
+        &__top-box {
+            align-items: center;
+            flex-direction: column;
         }
     }
 
@@ -719,6 +1292,65 @@
             max-width: 50px;
             max-height: 50px;
             margin-bottom: 20px;
+        }
+    }
+
+    .order-thanks {
+        &__inner {
+            margin: 35px 0 40px;
+        }
+        &__title {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    .clients {
+        &__counter-namber {
+            font-size: 100px;
+            line-height: 96px;
+        }
+        &__counter-title {
+            font-size: 18px;
+            line-height: 17px;
+        }
+    }
+
+    .values {
+        &__image::before {
+            font-size: 70px;
+            line-height: 55px;
+        }
+    }
+
+    .card-product {
+        .product-slide__thumb-btnNext,
+        .product-slide__thumb-btnPrev {
+            left: 25px;
+        }
+        .product-slide__big {
+            max-width: 230px;
+        }
+        .product-slide__big img {
+            width: 230px;
+        }
+        .jq-number__field input {
+            max-width: 125px;
+        }
+        .jq-number__spin.plus {
+            left: 95px;
+        }
+    }
+    .about {
+        &__top-btn {
+            width: 100%;
+            padding: 15px;
         }
     }
 

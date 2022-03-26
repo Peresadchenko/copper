@@ -708,6 +708,7 @@
     }
     &__image {
         position: relative;
+        height: fit-content;
         &::before {
             content: "COPPER PRO";
             position: absolute;
@@ -716,17 +717,17 @@
             color: $default;
             @extend %Lighthaus-400;
             text-align: end;
-            bottom: -20px;
+            bottom: 0;
             right: 35px;
             width: 660px;
-            height: 240px;
             z-index: 3;
         }
     }
     &__img {
         max-width: 685px;
+        width: 100%;
         object-fit: cover;
-        margin-right: 30px;
+        padding-right: 30px;
     }
     &__title {
         max-width: 295px;
@@ -767,6 +768,9 @@
         left: 0;
         background: no-repeat url("../images/icons/values-item-2.svg");
     }
+    &__item-3 {
+        margin-bottom: 0;
+    }
     &__item-3::after {
         content: "";
         position: absolute;
@@ -789,7 +793,7 @@
     &__items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 335px);
+        grid-template-rows: repeat(335px);
         grid-gap: 30px;
         margin-bottom: 45px;
     }
@@ -857,13 +861,21 @@
         display: flex;
         margin-bottom: 50px;
     }
-    &__share {
+    &__social-bottom {
+        display: flex;
+    }
+    &__share-title {
         font-size: 16px;
         @extend %mont_heavydemo-600;
         text-transform: uppercase;
-        margin-right: 50px;
+        margin: 0 50px 10px 0;
+    }
+    &__share-box {
+        display: flex;
     }
     &__share-img {
+        max-width: 20px;
+        width: 100%;
         opacity: 1;
         transition: all 0.3s;
         &:hover {
@@ -929,6 +941,7 @@
         }
     }
     &__prev-link {
+        max-width: 350px;
         padding-left: 30px;
         position: relative;
         transition: all 0.3s;
@@ -969,42 +982,50 @@
 // cart.html-------------------------------------------
 
 .cart {
+    padding-bottom: 170px;
     &__inner {
         display: grid;
-        grid-template-columns: repeat(2, 70% 30%);
-        grid-gap: 30px;
+        grid-template-columns: repeat(2, 67% 30%);
+        grid-gap: 3%;
     }
     &__title {
         margin-top: 25px;
         line-height: 53px;
         text-align: start;
     }
-    &__content-inner {
+    &__content {
+        margin-bottom: 20px;
+    }
+    &__content-top {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 50% 25% 25%);
         grid-gap: 0;
-        margin-bottom: 30px;
     }
     &__content-table {
         font-size: 16px;
         color: #a1a1a1;
         border-bottom: 1px solid #e6e8e7;
         padding-bottom: 20px;
-        margin-bottom: 20px;
     }
     &__content-item {
-        height: 100px;
-        display: flex;
+        height: 140px;
+        max-height: 100%;
         align-items: center;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
         border-bottom: 1px solid #e6e8e7;
         position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 50% 25% 25%);
+        grid-gap: 0;
         &:last-child {
             border: none;
             margin-bottom: 0;
         }
+    }
+    &__content-name {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
     }
     &__item-img {
         max-width: 90px;
@@ -1031,16 +1052,13 @@
     }
     &__item-trash {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 15px;
+        right: 15px;
         width: 18px;
         height: 18px;
         border: none;
         background: url("../images/icons/trash.svg");
         cursor: pointer;
-    }
-    &__content-link {
-        margin-bottom: 170px;
     }
     &__total {
         max-width: 445px;
@@ -1054,28 +1072,31 @@
             right: 0;
             width: 165px;
             height: 120px;
+            z-index: -1;
             background: no-repeat bottom url("../images/icons/cart-total.svg");
         }
     }
     &__total-top {
         border-bottom: 1px solid #e6e8e7;
-        margin-bottom: 30px;
+        padding: 25px 25px 30px 25px;
+    }
+    &__total-box {
+        padding: 25px 25px 40px 25px;
     }
     &__total-text {
         font-size: 35px;
         line-height: 33px;
-        margin: 25px 0 20px 30px;
+        margin-bottom: 20px;
     }
     &__total-price {
         font-size: 40px;
         line-height: 38px;
         @extend %mont_heavydemo-600;
-        margin: 0 0 30px 30px;
     }
     &__total-span {
         max-width: 260px;
         font-size: 16px;
-        margin: 0 0 30px 40px;
+        margin-bottom: 30px;
         font-weight: 600;
         color: #a1a1a1;
         padding-left: 65px;
@@ -1091,7 +1112,8 @@
         }
     }
     &__total-btn {
-        padding: 17px 80px;
+        max-width: 370px;
+        padding: 17px;
         margin: 0 auto;
     }
 }
@@ -1387,6 +1409,9 @@
         border-right: none;
         margin-top: 40px;
     }
+    &__checkout-delivery {
+        margin-left: 30px;
+    }
     &__checkout-btn {
         display: inline-block;
         padding: 17px 20px 19px;
@@ -1471,10 +1496,11 @@
 
 .order-thanks {
     &__inner {
-        margin-top: 105px;
+        margin: 105px 0 210px;
     }
     &__img {
         max-width: 376px;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 15px;
     }
@@ -1494,8 +1520,6 @@
     &__btn {
         max-width: 445px;
         margin: 0 auto;
-        margin-bottom: 210px;
-        padding: 15px 185px;
         text-align: center;
     }
 }
@@ -1507,7 +1531,10 @@
         margin-bottom: 215px;
     }
     &__btn-back {
+        max-width: 327px;
+        width: 100%;
         margin: 70px 0 95px;
+        padding: 17px 30px;
     }
     &__reg {
         max-width: 445px;
@@ -1522,6 +1549,7 @@
     }
     &__form {
         margin-bottom: 30px;
+        padding: 20px;
     }
     &__input {
         display: block;
@@ -1558,7 +1586,7 @@
     &__btn {
         max-width: 375px;
         width: 100%;
-        padding: 15px 90px;
+        padding: 15px 60px;
         margin: 0 auto;
         text-align: center;
         border: none;
@@ -1938,7 +1966,6 @@
     &__social-img {
         margin-right: 18px;
     }
-
     &__description-box {
         border-bottom: 1px solid #e6e8e7;
         padding-bottom: 70px;
@@ -1991,10 +2018,12 @@
         }
     }
     &__big {
-        width: 565px;
+        max-width: 565px;
+        width: 100%;
+        height: 610px;
         img {
-            width: 565px;
-            height: 626px;
+            width: 100%;
+            height: 610px;
             object-fit: cover;
         }
     }
@@ -2015,6 +2044,12 @@
         height: 27px;
         border: none;
         background: no-repeat url("../images/icons/product-slide-btnPrev.png");
+    }
+    .product-box__item-sale--active {
+        left: 15px;
+    }
+    .product-box__item-like {
+        right: 15px;
     }
 }
 
