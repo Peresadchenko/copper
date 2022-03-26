@@ -133,6 +133,20 @@
             margin-bottom: 45px;
         }
     }
+
+    .filter-category {
+        &__form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        &__label {
+            width: 100%;
+        }
+        &__img {
+            width: 665px;
+        }
+    }
 }
 
 // 1200----------------------------------------------------
@@ -336,6 +350,12 @@
         &__title {
             margin-top: 0;
             margin-bottom: 15px;
+        }
+    }
+
+    .catalog {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -782,6 +802,27 @@
         }
     }
 
+    .catalog {
+        &__items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-box__item {
+            max-width: 700px;
+            width: 100%;
+        }
+        .product-box__item-img {
+            max-width: 700px;
+            width: 100%;
+        }
+        .product-box__item-content {
+            max-width: 700px;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
     .pagination {
         margin-bottom: 40px;
     }
@@ -1183,6 +1224,28 @@
         }
     }
 
+    .filter {
+        .filter-box {
+            display: block;
+            margin-bottom: 0;
+        }
+        .filter-price {
+            justify-content: space-between;
+            padding-right: 0;
+        }
+        .filter-search__btn {
+            right: 20px;
+        }
+        .filter-search__input {
+            width: 100%;
+        }
+        .filter-category__title {
+            font-size: 16px;
+            left: 10px;
+            bottom: 10px;
+        }
+    }
+
     .footer {
         &__nav {
             justify-content: flex-start;
@@ -1347,11 +1410,37 @@
             left: 95px;
         }
     }
+
     .about {
         &__top-btn {
             width: 100%;
             padding: 15px;
         }
+    }
+
+    .filter {
+        .filter-category__title {
+            font-size: 12px;
+            left: 5px;
+        }
+        .filter-category__form {
+            grid-gap: 10px;
+        }
+        .filter-category {
+            padding-bottom: 20px;
+        }
+        .filter-price__title {
+            font-size: 16px;
+        }
+        .jq-selectbox__select-text {
+            font-size: 16px;
+        }
+        .jq-selectbox__select {
+            padding: 0;
+        }
+    }
+    .product-box__item-price {
+        font-size: 20px;
     }
 
     .contact {
