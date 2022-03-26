@@ -611,6 +611,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
+    z-index: 1;
     &__title {
         font-size: 20px;
         font-weight: 600;
