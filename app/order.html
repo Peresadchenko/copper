@@ -24,18 +24,21 @@
   <section class="order">
     <div class="container">
       <div class="order__inner">
-        <h1 class="order__title title">Оформить заказ</h1>
         <a class="order__link btn-3" href="#">Назад к покупкам</a>
+        <h1 class="order__title title">Оформить заказ</h1>
         <div class="order__inner-box">
           <form class="order__form-box" action="#" method="post" enctype="multipart/form-data">
 
             <div class="order__data">
 
               <div class="order__registration">
-                <img class="order__registration-img" src="images/icons/user.svg" alt="">
-                <div class="order__registration-box">
-                  <p class="order__registration-question">Уже есть аккаунт или хотите зарегистрироваться?</p>
-                  <p class="order__registration-text">Войдите в кабинет и получите скидку </p>
+                <div class="order__registration-top">
+                  <img class="order__registration-img" src="images/icons/user.svg" alt="">
+                  <div class="order__registration-box">
+                    <p class="order__registration-question">Уже есть аккаунт или хотите зарегистрироваться?</p>
+                    <p class="order__registration-text">Войдите в кабинет и получите скидку </p>
+                  </div>
+
                 </div>
                 <div class="order__registration-buttons">
                   <a class="order__registration-btn btn btn-enter" href="enter.html">Войти</a>
@@ -90,7 +93,7 @@
 
               <div class="order__form">
                 <p class="order__form-title order__payment-title">Оплата</p>
-                <div class="order__form-radio radio-payment">
+                <div class="order__form-radio order__form-payment">
                   <div class="order__form-item">
                     <input class="order__input-payment" type="radio" name="payment" value="receiving" checked>
                     <label class="order__input-choice" for="paymentChoice1">При получении</label>

@@ -124,7 +124,9 @@ body {
 
 // sliders-------------------------------------------
 
-.slick-slide {padding: 0 15px;}
+.slick-slide {
+    padding: 0 15px;
+}
 
 .top-slider,
 .sales-slider,
@@ -237,9 +239,6 @@ body {
         opacity: 1;
     }
 }
-
-
-
 
 .sales-slider,
 .novelties-slider,
@@ -611,7 +610,6 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    z-index: 1;
     &__title {
         font-size: 20px;
         font-weight: 600;
@@ -624,6 +622,9 @@ body {
         font-size: 20px;
         @extend %mont_heavydemo-600;
         border: none;
+    }
+    &__form {
+        z-index: 1;
     }
 }
 
