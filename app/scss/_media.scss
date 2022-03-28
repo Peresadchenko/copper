@@ -195,6 +195,12 @@
             max-width: none;
             width: 100%;
         }
+        &__checkout-boxPrice {
+            justify-content: flex-start;
+        }
+        &__checkout-priceTotal {
+            margin-right: 50px;
+        }
         &__checkout-delivery {
             margin: 0 auto;
             margin-bottom: 20px;
@@ -303,6 +309,7 @@
     }
 
     .enter {
+        margin-top: 30px;
         &__inner {
             margin-bottom: 55px;
         }
@@ -310,7 +317,7 @@
             padding-bottom: 0;
         }
         &__btn-back {
-            margin: 30px 0 55px;
+            margin-bottom: 55px;
         }
         &__title {
             padding: 40px 0 5px;
@@ -676,6 +683,7 @@
     }
 
     .enter {
+        margin-top: 20px;
         &__box {
             padding: 24px 20px;
         }
@@ -687,10 +695,10 @@
             line-height: 16px;
         }
         &__btn-back {
-            margin: 20px 0 40px;
-        }
-        &__btn-back {
             max-width: 290px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 40px;
         }
         &__title {
             padding: 30px 0 5px;
@@ -902,6 +910,9 @@
         &__registration-question {
             font-size: 16px;
             line-height: 18px;
+        }
+        &__checkout-promo {
+            margin-right: 0;
         }
     }
 
@@ -1622,6 +1633,12 @@
         &__checkout-titel {
             max-width: 165px;
             margin-right: 0;
+        }
+        &__checkout-priceTotal {
+            margin-right: 20px;
+        }
+        &__checkout-promo {
+            max-width: 120px;
         }
     }
 

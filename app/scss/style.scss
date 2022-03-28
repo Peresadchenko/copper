@@ -1440,6 +1440,7 @@
         font-size: 40px;
         line-height: 38px;
         @extend %mont_heavydemo-600;
+        margin-right: 10px;
     }
     &__checkout-promo {
         display: flex;
@@ -1489,6 +1490,9 @@
 .order-user {
     &__registration-img {
         padding: 0;
+        width: 82px;
+        height: 82px;
+        object-fit: cover;
     }
     &__btn {
         display: none;
@@ -1530,13 +1534,14 @@
 // enter.html-------------------------------------------
 
 .enter {
+    margin-top: 70px;
     &__inner {
         margin-bottom: 215px;
     }
     &__btn-back {
         max-width: 327px;
         width: 100%;
-        margin: 70px 0 95px;
+        margin-bottom: 95px;
         padding: 17px 30px;
     }
     &__reg {
