@@ -147,6 +147,59 @@
             width: 665px;
         }
     }
+
+    .order {
+        &__inner-box {
+            flex-direction: column;
+        }
+        &__form-box {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__data {
+            max-width: none;
+            width: 100%;
+            margin-right: 0;
+        }
+        &__form-data {
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__link {
+            position: static;
+            display: block;
+            max-width: 330px;
+            padding: 17px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        &__title {
+            margin-top: 35px;
+        }
+        &__registration-box {
+            max-width: none;
+        }
+        &__delivery-text {
+            margin-top: 15px;
+        }
+        &__form-payment {
+            border-bottom: 1px solid #e6e8e7;
+        }
+        &__input-data {
+            max-width: 100%;
+        }
+        &__registration {
+            max-width: none;
+        }
+        &__checkout {
+            max-width: none;
+            width: 100%;
+        }
+        &__checkout-delivery {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 // 1200----------------------------------------------------
@@ -356,6 +409,25 @@
     .catalog {
         &__items {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .order {
+        &__registration {
+            max-width: none;
+            height: auto;
+        }
+
+        &__registration-buttons {
+            flex-direction: column;
+            padding: 20px 0;
+            margin-left: 30px;
+        }
+        .btn-enter {
+            margin-bottom: 15px;
+            &:first-child {
+                margin-right: 0;
+            }
         }
     }
 
@@ -823,6 +895,16 @@
         }
     }
 
+    .order {
+        .title {
+            margin: 30px 0 15px;
+        }
+        &__registration-question {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
     .pagination {
         margin-bottom: 40px;
     }
@@ -1172,6 +1254,79 @@
         }
     }
 
+    .order {
+        &__inner {
+            margin-bottom: 40px;
+        }
+        &__registration {
+            display: block;
+            &::after {
+                top: auto;
+                bottom: 0;
+            }
+        }
+        &__registration-top {
+            flex-direction: column;
+            align-items: center;
+            max-width: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__registration-box {
+            max-width: 300px;
+            align-items: center;
+        }
+        .btn-enter,
+        .btn-reg {
+            max-width: none;
+            width: 100%;
+        }
+        &__registration-buttons {
+            padding-top: 0;
+        }
+        &__form-title,
+        &__input-choice,
+        &__form-item--active label {
+            font-size: 18px;
+            line-height: 17px;
+        }
+        &__form-data {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+        }
+        &__form-radio {
+            margin-bottom: 35px;
+        }
+        &__form-item {
+            margin-bottom: 15px;
+        }
+        &__form-item:last-child {
+            margin-bottom: 30px;
+        }
+        &__checkout-form {
+            padding-left: 0;
+        }
+        &__checkout-boxTotal {
+            padding-left: 0;
+        }
+        &__checkout-total {
+            box-shadow: none;
+        }
+        &__checkout-product {
+            height: 380px;
+        }
+        &__checkout-text {
+            font-size: 24px;
+            line-height: 23px;
+        }
+        &__checkout-priceTotal {
+            font-size: 30px;
+            line-height: 27px;
+        }
+    }
+
     .contact {
         &__top {
             flex-direction: column;
@@ -1439,8 +1594,35 @@
             padding: 0;
         }
     }
+
     .product-box__item-price {
         font-size: 20px;
+    }
+
+    .order {
+        &__checkout-totalBtn {
+            width: 100%;
+            padding: 17px;
+        }
+        &__checkout-input {
+            width: 185px;
+            padding: 18px 10px 17px 10px;
+            font-size: 14px;
+        }
+        &__checkout-btn {
+            font-size: 14px;
+            padding: 18px 10px 17px;
+        }
+        &__checkout-item {
+            padding-bottom: 15px;
+        }
+        &__checkout-img {
+            margin-right: 15px;
+        }
+        &__checkout-titel {
+            max-width: 165px;
+            margin-right: 0;
+        }
     }
 
     .contact {
