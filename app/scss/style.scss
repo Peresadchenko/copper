@@ -592,7 +592,6 @@
     }
     &__img {
         max-width: 700px;
-        margin-right: -90px;
     }
 }
 
@@ -636,6 +635,7 @@
         background: no-repeat center url("../images/bg-history.jpg");
         background-size: cover;
         position: relative;
+        padding-bottom: 30px;
         &::before {
             content: "COPPER PRO";
             position: absolute;
@@ -666,7 +666,6 @@
         font-size: 16px;
         line-height: 21px;
         margin-right: 30px;
-        padding-bottom: 30px;
         &:last-child {
             margin-right: 0;
         }
@@ -697,7 +696,7 @@
         line-height: 25px;
     }
     &__img {
-        max-width: 1075px;
+        margin:  0 auto;
     }
 }
 
@@ -1000,6 +999,12 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 50% 25% 25%);
+        grid-gap: 0;
+    }
+    &__profile-top {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 40% 15% 15% 15% 15%);
         grid-gap: 0;
     }
     &__content-table {
@@ -1639,10 +1644,15 @@
         margin-bottom: 40px;
     }
     &__filter-btn {
+        max-width: 330px;
         display: flex;
         flex-direction: column;
+        margin-right: 30px;
     }
-    .profile__btn {
+    &__items {
+        width: 100%;
+    }
+    &__btn {
         max-width: 325px;
         width: 100%;
         height: 50px;
@@ -1659,16 +1669,13 @@
         cursor: pointer;
         background-size: 150%;
         transition: all 0.5s;
+        &:hover {
+            background-position-x: 99%;
+        }
     }
-    .profile__btn:hover {
-        background-position-x: 99%;
-    }
-    .mixitup-control-active {
-        background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-    }
-    .profile__btn-profile,
-    .profile__btn-order,
-    .profile__btn-like {
+    &__btn-profile,
+    &__btn-order,
+    &__btn-like {
         &::after {
             content: "";
             position: absolute;
@@ -1726,7 +1733,6 @@
         width: 40px;
         opacity: 0;
     }
-
     &__user-span {
         font-size: 14px;
         line-height: 13px;
@@ -1752,13 +1758,14 @@
         margin-bottom: 27px;
     }
     &__user-name,
-    .profile__pass-title {
+    &__pass-title {
         font-size: 27px;
         line-height: 26px;
         @extend %mont_heavydemo-600;
         margin-bottom: 27px;
     }
     &__box-data {
+        width:  max-content;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
@@ -1798,6 +1805,11 @@
         grid-gap: 0;
         margin-bottom: 30px;
     }
+    &__content-item {
+        display: grid;
+        grid-template-columns: repeat(5, 40% 15% 15% 15% 15%);
+        grid-gap: 0;
+    }
     &__item-product {
         max-width: 315px;
         height: 465px;
@@ -1812,9 +1824,8 @@
     }
     &__item-productBox {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        margin-left: 30px;
     }
     .input-pay {
         max-width: 150px;

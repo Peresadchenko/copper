@@ -761,3 +761,22 @@ body {
     height: 49px;
     background-color: #e6e8e7;
 }
+
+.mixitup-control-active {
+    background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+}
+
+
+@mixin customScrollbar() {
+    &::-webkit-scrollbar {
+        background-color: $backgroundgray;
+        border-radius: 3px;
+        width: 6px;
+
+        &-thumb {
+            background-color: $secondary;
+            border: 3px solid $secondary;
+            border-radius: 3px;
+        }
+    }
+}

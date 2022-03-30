@@ -27,10 +27,6 @@
         line-height: 85px;
         bottom: 215px;
     }
-
-    .geography__img {
-        max-width: 965px;
-    }
 }
 
 // 1400----------------------------------------------------
@@ -826,6 +822,29 @@
         }
     }
 
+    .geography {
+        &__image {
+            overflow: scroll;
+            padding-bottom: 30px;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 5px;
+                background-color: #f6f6f6;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #f6f6f6;
+                box-shadow: 0px 0px 30px 0px rgba(196, 196, 196, 0.3);
+            }
+        }
+        &__img {
+            min-width: max-content;
+        }
+    }
+
     .history {
         .title {
             font-size: 40px;
@@ -843,7 +862,6 @@
     .values {
         &__inner {
             display: block;
-            margin: 40px;
         }
         &__image {
             margin-bottom: 25px;
@@ -1537,6 +1555,12 @@
         }
         &__btn {
             width: 100%;
+        }
+    }
+
+    .about-us {
+        &__img {
+            max-width: -webkit-fill-available;
         }
     }
 
