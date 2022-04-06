@@ -121,7 +121,7 @@
             color: $default;
             @extend %Lighthaus-400;
             bottom: 0;
-            left: 65%;
+            right: 0;
             width: 660px;
             height: 240px;
             z-index: -1;
@@ -174,7 +174,7 @@
     &__img {
         position: absolute;
         top: 0;
-        left: 60%;
+        right: -15px;
         height: 100%;
         object-fit: contain;
         z-index: -2;
@@ -354,7 +354,7 @@
         &__item {
             max-width: 445px;
             padding: 20px 30px;
-            margin: 30px 10px 35px;
+            margin: 30px 0;
             box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
             position: relative;
             &::after {
@@ -696,7 +696,7 @@
         line-height: 25px;
     }
     &__img {
-        margin:  0 auto;
+        margin: 0 auto;
     }
 }
 
@@ -1004,14 +1004,15 @@
     &__profile-top {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 40% 15% 15% 15% 15%);
+        grid-template-columns: repeat(5, 40% 15% 17% 12% 16%);
         grid-gap: 0;
     }
-    &__content-table {
+    &__content-table,
+    &__profile-table {
         font-size: 16px;
         color: #a1a1a1;
         border-bottom: 1px solid #e6e8e7;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
     }
     &__content-item {
         height: 140px;
@@ -1706,6 +1707,7 @@
     }
     &__btn-exit {
         max-width: 95px;
+        width: 100%;
         border: none;
         align-items: center;
         background: no-repeat url("../images/icons/exit.png");
@@ -1719,7 +1721,6 @@
     &__box-user {
         display: flex;
         align-items: center;
-        width: 685px;
         margin-bottom: 40px;
     }
     &__user-img {
@@ -1729,20 +1730,18 @@
         border-radius: 50%;
         margin-right: 20px;
     }
-    &__user-input {
-        width: 40px;
-        opacity: 0;
-    }
-    &__user-span {
+    &__user-label {
+        position: relative;
         font-size: 14px;
         line-height: 13px;
         font-weight: 600;
-        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
         &::after {
             content: "";
             position: absolute;
             bottom: -2px;
-            left: -30px;
+            left: 0;
             width: 16px;
             height: 16px;
             background: url("../images/icons/load.svg");
@@ -1753,38 +1752,49 @@
     &__user-span2 {
         color: $input;
     }
+    &__user-chosen {
+        color: $span;
+    }
     &__user-text {
+        font-size: 20px;
         font-weight: 600;
         margin-bottom: 27px;
+        @extend %mont_extralightdemo-400;
     }
     &__user-name,
-    &__pass-title {
+    &__box-title {
         font-size: 27px;
         line-height: 26px;
         @extend %mont_heavydemo-600;
         margin-bottom: 27px;
     }
     &__box-data {
-        width:  max-content;
+        max-width: 685px;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
         margin-bottom: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #e6e8e7;
+        @extend %Montserrat-Regular-400;
     }
     &__box-pass {
         margin-bottom: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #e6e8e7;
     }
+    &__pass-input {
+        margin-right: 30px;
+        @extend %Montserrat-Regular-400;
+    }
     &__pass-btn {
         width: 100%;
         height: 50px;
         display: inline-block;
+        text-align: start;
         padding: 14px 100px 13px 21px;
         background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
-        margin-left: 29px;
         background-size: 150%;
         &:hover {
             background-position-x: 99%;
@@ -1792,6 +1802,32 @@
     }
     &__box-pay {
         margin-bottom: 40px;
+    }
+    &__inputs-box {
+        display: flex;
+        flex-wrap: wrap;
+        .input {
+            margin-right: 30px;
+            font-size: 18px;
+            @extend %Montserrat-Regular-400;
+        }
+    }
+    &__inputs-pay {
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input-card {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            background: url("../images/icons/credit-card.png");
+        }
     }
     &__form-btn {
         padding: 17px 112px;
@@ -1801,13 +1837,13 @@
     &__item-cart {
         width: 1040px;
         display: grid;
-        grid-template-columns: repeat(5, 40% 15% 15% 15% 15%);
+        grid-template-columns: repeat(5, 40% 15% 17% 12% 16%);
         grid-gap: 0;
         margin-bottom: 30px;
     }
     &__content-item {
         display: grid;
-        grid-template-columns: repeat(5, 40% 15% 15% 15% 15%);
+        grid-template-columns: repeat(5, 40% 15% 17% 12% 16%);
         grid-gap: 0;
     }
     &__item-product {
@@ -1829,8 +1865,11 @@
     }
     .input-pay {
         max-width: 150px;
-        margin-left: 26px;
         font-size: 18px;
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     .item-product__img {
         min-width: auto;

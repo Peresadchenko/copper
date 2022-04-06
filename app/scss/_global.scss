@@ -128,6 +128,14 @@ body {
     padding: 0 15px;
 }
 
+.top-slider {
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        margin-top: -80px;
+    }
+}
+
 .top-slider,
 .sales-slider,
 .novelties-slider,
@@ -135,10 +143,8 @@ body {
 .discounts-slider,
 .about-slider {
     .slick-dots {
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
         display: flex;
+        justify-content: center;
         font-size: 0;
     }
     .slick-dots button {
@@ -161,8 +167,7 @@ body {
 .discounts-slider,
 .about-slider {
     .slick-dots {
-        left: 48%;
-        bottom: -70px;
+        margin: 45px 0;
     }
     .slick-dots button {
         background-color: #031412;
@@ -245,7 +250,7 @@ body {
 .recommend-slider,
 .discounts-slider,
 .about-slider {
-    margin-bottom: 110px;
+    margin-bottom: 45;
     &__inner {
         margin: 0 -15px;
     }
@@ -667,7 +672,7 @@ body {
     right: 0;
     border: 1px solid $text;
     border-radius: 5px;
-    background: rgba(196, 196, 196, 0.4);
+    background: rgb(239, 239, 239);
     cursor: pointer;
 }
 .jq-selectbox__dropdown ul {
@@ -685,6 +690,9 @@ body {
     &:hover {
         color: $span;
     }
+}
+.filter-price__select select {
+    display: none;
 }
 
 // -------------------------------------------
@@ -722,12 +730,11 @@ body {
 }
 .jq-number__spin.minus {
     left: 20px;
-    position: relative;
     &::after {
         content: "-";
         position: absolute;
         font-size: 20px;
-        top: -60px;
+        top: -5px;
         left: 0px;
         @extend %mont_heavydemo-600;
     }
@@ -738,7 +745,7 @@ body {
         content: "+";
         position: absolute;
         font-size: 20px;
-        top: -8px;
+        top: -5px;
         left: 0px;
         @extend %mont_heavydemo-600;
     }
@@ -763,20 +770,5 @@ body {
 }
 
 .mixitup-control-active {
-    background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
-}
-
-
-@mixin customScrollbar() {
-    &::-webkit-scrollbar {
-        background-color: $backgroundgray;
-        border-radius: 3px;
-        width: 6px;
-
-        &-thumb {
-            background-color: $secondary;
-            border: 3px solid $secondary;
-            border-radius: 3px;
-        }
-    }
+    background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%) !important;
 }

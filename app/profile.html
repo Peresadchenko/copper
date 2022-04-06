@@ -240,12 +240,14 @@
       <h1 class="profile__title title">Личный кабинет</h1>
       <div class="profile__inner">
 
-        <div class="profile__filter-btn">
-          <button class="profile__btn profile__btn-profile" type="button" data-filter=".category-a">Детали
-            профиля</button>
-          <button class="profile__btn profile__btn-order" type="button" data-filter=".category-b">Заказы</button>
-          <button class="profile__btn profile__btn-like" type="button" data-filter=".category-c">Список
-            желаемого</button>
+        <div class="profile__filter-wrapper">
+          <div class="profile__filter-btn">
+            <button class="profile__btn profile__btn-profile" type="button" data-filter=".category-a">Детали
+              профиля</button>
+            <button class="profile__btn profile__btn-order" type="button" data-filter=".category-b">Заказы</button>
+            <button class="profile__btn profile__btn-like" type="button" data-filter=".category-c">Список
+              желаемого</button>
+          </div>
           <input class="profile__btn-exit" name="Выход" placeholder="Выйти" type="button"
             onClick="location.href='enter.html'">
         </div>
@@ -262,11 +264,13 @@
                     <div class="profile__user-info">
                       <p class="profile__user-text">Добрый день</p>
                       <p class="profile__user-name">Иван Иванов</p>
-                      <label class="profile__user-label" for="file">
-                        <input class="profile__user-input" type="file" name="photo" accept="image/jpeg,image/png">
-                        <span class="profile__user-span">Загрузить фото <span class="profile__user-span2">(jpeg,
-                            png)</span></span>
+                      <input class="profile__user-input" id="profile__user-input" type="file" name="photo"
+                        accept="image/jpeg,image/png" hidden>
+                      <label class="profile__user-label" for="profile__user-input">Загрузить фото <span
+                          class="profile__user-span2">(jpeg,
+                          png)</span>
                       </label>
+                      <span class="profile__user-chosen" id="file-chosen"></span>
                     </div>
                   </div>
 
@@ -279,17 +283,23 @@
                   </div>
 
                   <div class="profile__box-pass">
-                    <p class="profile__pass-title">Пароль</p>
+                    <p class="profile__box-title">Пароль</p>
                     <input class="profile__pass-input input" required placeholder="Пароль" name="pwd" type="password">
                     <button class="profile__pass-btn btn" type="submit">Сменить пароль</button>
                   </div>
 
                   <div class="profile__box-pay">
-                    <p class="profile__pass-title">Платежная система </p>
-                    <input class="profile__data-input input" required placeholder="Номер карты" name="card" type="#">
-                    <input class="profile__data-input input input-pay" required placeholder="Дата:" name="card"
-                      type="#">
-                    <input class="profile__data-input input input-pay" required placeholder="CVV:" name="card" type="#">
+                    <p class="profile__box-title">Платежная система </p>
+                    <div class="profile__inputs-box">
+                      <input class="profile__data-input profile__input-card input" required placeholder="Номер карты" name="card" type="card">
+                      <div class="profile__inputs-pay">
+                        <input class="profile__data-input input input-pay" required placeholder="Дата:" name="card"
+                          type="date-1">
+                        <input class="profile__data-input input input-pay" required placeholder="CVV:" name="card"
+                          type="cvv">
+                      </div>
+
+                    </div>
                   </div>
 
                   <button class="profile__form-btn btn" type="submit">Сохранить</button>
@@ -304,7 +314,7 @@
           <div class="profile__item mix category-b" id="product">
             <div class="profile__item-inner">
 
-              <div class="cart__content">
+              <div class="profile__cart-content cart__content">
 
                 <div class="cart__profile-top">
                   <p class="cart__profile-table">Товар</p>
@@ -323,7 +333,7 @@
                     <p class="cart__item-number"> 2 шт.</p>
                   </div>
                   <div class="cart__content-price">
-                    <div class="cart__content-sale">
+                    <div class="cart__content-sale ">
                       <span class="sale-price sale-priceCart">1 953 грн</span>
                       <p class="cart__item-price item-price__sale">5 000 грн</p>
                     </div>
