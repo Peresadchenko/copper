@@ -433,6 +433,40 @@ $(function () {
         }
     });
 
+    //profile__user-input// load img--------------------
 
+    const actualBtn = document.getElementById('profile__user-input');
+    const fileChosen = document.getElementById('file-chosen');
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    });
+
+    $.fn.setCursorPosition = function (pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+
+    //maskedinput-------------------------
+
+    $("input[type='date-1']").click(function () {
+        $(this).setCursorPosition(6);
+    }).mask("Дата: 99/99");
+
+
+    $("input[type='cvv']").click(function () {
+        $(this).setCursorPosition(5);
+    }).mask("CVV: 999");
+
+    $("input[type='card']").click(function () {
+        $(this).setCursorPosition(0);
+    }).mask("9999 9999 9999 9999");
 
 });
