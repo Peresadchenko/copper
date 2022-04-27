@@ -1824,7 +1824,20 @@
             font-size: 18px;
             margin-bottom: 10px;
         }
+        &__user-label {
+            flex-direction: column;
+            line-height: 17px;
+            &::after {
+                bottom: 10px;
+            }
+        }
+        &__user-span2 {
+            margin-left: 0;
+        }
         &__pass-input {
+            margin-right: 0;
+        }
+        &__input-card {
             margin-right: 0;
         }
         &__box-pay {
