@@ -1732,6 +1732,8 @@
     }
     &__user-label {
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
         font-size: 14px;
         line-height: 13px;
         font-weight: 600;
@@ -1751,6 +1753,7 @@
     }
     &__user-span2 {
         color: $input;
+        margin-left: 5px;
     }
     &__user-chosen {
         color: $span;
@@ -1807,7 +1810,6 @@
         display: flex;
         flex-wrap: wrap;
         .input {
-            margin-right: 30px;
             font-size: 18px;
             @extend %Montserrat-Regular-400;
         }
@@ -1818,15 +1820,19 @@
         justify-content: space-between;
     }
     &__input-card {
+        max-width: 325px;
+        width: 100%;
+        margin-right: 30px;
         position: relative;
-        &::after {
+        &::before {
             content: "";
             position: absolute;
-            bottom: 0;
-            right: 0;
+            top: 15px;
+            right: 15px;
             width: 18px;
             height: 18px;
-            background: url("../images/icons/credit-card.png");
+            background: no-repeat url("../images/icons/credit-card.png");
+            background-size: cover;
         }
     }
     &__form-btn {
